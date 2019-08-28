@@ -1,21 +1,25 @@
 spring:
   application:
     name: order-service
-    
+  rabbitmq:
+    host: 176.55.2.39
+    port: 5672
+    username: admin
+    password: admin
 #server:
 #  port: 8201
   
-#配置eureka 注册中心
+#閰嶇疆eureka 娉ㄥ唽涓績
 eureka:
   client:
     service-url:
       defaultZone: http://eureka1:2001/eureka, http://eureka2:2002/eureka
 
-#启用hystrix  熔断器
+#鍚敤hystrix  鐔旀柇鍣�
 feign:
   hystrix:
     enabled: true
-#暴露 hystrix.stream 端点
+#鏆撮湶 hystrix.stream 绔偣
 management:
   endpoints:
     web:
